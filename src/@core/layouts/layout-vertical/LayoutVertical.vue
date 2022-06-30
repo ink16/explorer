@@ -2,48 +2,18 @@
   <div
     class="vertical-layout h-100"
     :class="[layoutClasses]"
-    :data-col="isNavMenuHidden ? '1-column' : null"
+    :data-col="'1-column'"
   >
     <!-- Navbar -->
-    <b-navbar
-      :toggleable="false"
-      :variant="navbarBackgroundColor"
-      class="header-navbar navbar navbar-shadow align-items-center"
-      :class="[navbarTypeClass]"
-    >
-      <slot
-        name="navbar"
-        :toggle-vertical-menu-active="toggleVerticalMenuActive"
-        :navbar-background-color="navbarBackgroundColor"
-        :navbar-type-class="[...navbarTypeClass, 'header-navbar navbar navbar-shadow align-items-center']"
-      >
-        <app-navbar-vertical-layout :toggle-vertical-menu-active="toggleVerticalMenuActive" />
-      </slot>
-    </b-navbar>
-    <!--/ Navbar -->
-
-    <!-- Vertical Nav Menu -->
-    <vertical-nav-menu
-      v-if="!isNavMenuHidden"
-      :is-vertical-menu-active="isVerticalMenuActive"
+    <slot
+      name="navbar"
       :toggle-vertical-menu-active="toggleVerticalMenuActive"
+      :navbar-background-color="navbarBackgroundColor"
+      :navbar-type-class="[...navbarTypeClass, 'header-navbar navbar navbar-shadow align-items-center']"
     >
-      <template #header="slotProps">
-        <slot
-          name="vertical-menu-header"
-          v-bind="slotProps"
-        />
-      </template>
-    </vertical-nav-menu>
-    <!-- /Vertical Nav Menu -->
-
-    <!-- Vertical Nav Menu Overlay -->
-    <div
-      class="sidenav-overlay"
-      :class="overlayClasses"
-      @click="isVerticalMenuActive = false"
-    />
-    <!-- /Vertical Nav Menu Overlay -->
+      <app-navbar-vertical-layout :toggle-vertical-menu-active="toggleVerticalMenuActive" />
+    </slot>
+    <!--/ Navbar -->
 
     <!-- Content -->
 
