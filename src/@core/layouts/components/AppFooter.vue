@@ -1,6 +1,6 @@
 <template>
-  <h2 class="clearfix mb-0">
-    <span class="float-md-left d-none d-md-block d-md-inline-block mt-25">
+  <b-container>
+    <span class="float-md-left d-none d-md-block d-md-inline-block">
       <b-link
         class="mr-25 font-weight-bolder"
         href="#"
@@ -9,33 +9,42 @@
       | Explorer
     </span>
 
-    <router-link
-      v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-      class="float-md-right"
-      to="/coffee"
-    >Buy me a cup of coffee.
-      <span
-        v-ripple.400="'rgba(113, 102, 240, 0.15)'"
-        variant="outline-primary"
-      >
-        <feather-icon
-          icon="HeartIcon"
-          size="21"
-          class="text-danger stroke-current"
-        />
-      </span>
-    </router-link>
-  </h2>
+    <span class="float-md-right d-none d-md-block d-md-inline-block">
+      <b-link
+        class="mr-50 font-weight-bolder"
+        href="#"
+        target="_blank"
+      >About us</b-link>
+      <b-link
+        class="ml-50 mr-50 font-weight-bolder"
+        href="#"
+        target="_blank"
+      >Contact</b-link>
+      <b-link
+        class="ml-50 mr-50 font-weight-bolder"
+        href="#"
+        target="_blank"
+      >Jobs</b-link>
+      <b-link
+        class="ml-50 font-weight-bolder"
+        href="#"
+        target="_blank"
+      >Press kit</b-link>
+    </span>
+
+  </b-container>
 </template>
 
 <script>
-import { BLink, VBPopover } from 'bootstrap-vue'
+import {
+  BLink, VBPopover, BContainer, BRow, BCol,
+} from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
   name: 'AppFooter',
   components: {
-    BLink,
+    BLink, BContainer, BRow, BCol,
   },
   directives: {
     'b-popover': VBPopover,
