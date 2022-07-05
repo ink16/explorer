@@ -1,12 +1,12 @@
 <template>
-  <p class="clearfix mb-0">
+  <h2 class="clearfix mb-0">
     <span class="float-md-left d-none d-md-block d-md-inline-block mt-25">
-      Powered By
       <b-link
-        class="ml-25 font-weight-bolder"
+        class="mr-25 font-weight-bolder"
         href="#"
         target="_blank"
-      >Ping.pub</b-link>
+      >Humans.ai</b-link>
+      | Explorer
     </span>
 
     <router-link
@@ -25,7 +25,7 @@
         />
       </span>
     </router-link>
-  </p>
+  </h2>
 </template>
 
 <script>
