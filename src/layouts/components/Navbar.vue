@@ -9,19 +9,24 @@
     toggleable="lg"
     type="dark"
     :variant="info"
-    class="header-navbar navbar navbar-shadow lg:align-items-center"
+    class="header-navbar navbar navbar-shadow"
   >
-    <b-container>
-      <b-navbar-brand href="#">
-        Explorer | Humans.ai
-      </b-navbar-brand>
+    <div class="navbar-container d-flex content">
 
+      <!-- Left Col -->
+      <div class="bookmark-wrapper align-items-center d-none d-lg-flex">
+        <b-navbar-brand href="#">
+          Explorer | Humans.ai
+        </b-navbar-brand>
+      </div>
+
+      <!-- Middle Col-->
       <b-navbar-toggle target="nav-collapse" />
-
       <b-collapse
         id="nav-collapse"
         is-nav
       >
+        <!-- Nav Menu Toggler -->
         <b-navbar-nav class="mx-auto">
           <b-nav-item href="#">
             Summary
@@ -41,34 +46,119 @@
           <b-nav-item href="#">
             State Sync
           </b-nav-item>
+
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input
-              size="sm"
-              class="mr-sm-2"
-              placeholder="Search"
-            />
-            <b-button
-              size="sm"
-              class="my-2 my-sm-0"
-              type="submit"
+        <!--<b-navbar-nav class="ml-auto">
+          x
+        </b-navbar-nav>-->
+        <!-- Right Col -->
+        <b-navbar-nav class="nav align-items-center">
+          <dark-Toggler class="d-none d-lg-block" />
+          <search-bar />
+          <locale />
+          <b-dropdown
+            class="ml-1"
+            variant="link"
+            no-caret
+            toggle-class="p-0"
+            right
+          >
+
+            <template #button-content>
+              <b-button
+                v-ripple.400="'rgba(255, 255, 255, 0.15)'"
+                variant="primary"
+                class="btn-icon"
+              >
+                <feather-icon icon="KeyIcon" />
+                {{ walletName }}
+              </b-button>
+            </template>
+
+            <b-dropdown-item
+              v-for="(item,k) in accounts"
+              :key="k"
+              :disabled="!item.address"
+              :to="`/${selected_chain.chain_name}/account/${item.address.addr}`"
+              @click="updateDefaultWallet(item.wallet)"
             >
-              Search
-            </b-button>
-          </b-nav-form>
+              <div class="d-flex flex-column">
+                <span class="font-weight-bolder">{{ item.wallet }}
+                  <b-avatar
+                    v-if="item.wallet===walletName"
+                    variant="success"
+                    size="sm"
+                  >
+                    <feather-icon icon="CheckIcon" />
+                  </b-avatar>
+                </span>
+                <small>{{ item.address ? formatAddr(item.address.addr) : `Not available on ${selected_chain.chain_name}` }}</small>
+              </div>
+            </b-dropdown-item>
+            <b-dropdown-divider />
+            <b-dropdown-item to="/wallet/import">
+              <feather-icon
+                icon="PlusIcon"
+                size="16"
+              />
+              <span class="align-middle ml-50">Import Address</span>
+            </b-dropdown-item>
+            <b-dropdown-divider />
+
+            <b-dropdown-item :to="{ name: 'accounts' }">
+              <feather-icon
+                icon="KeyIcon"
+                size="16"
+              />
+              <span class="align-middle ml-50">Accounts</span>
+            </b-dropdown-item>
+
+            <b-dropdown-item :to="{ name: 'delegations' }">
+              <feather-icon
+                icon="BookOpenIcon"
+                size="16"
+              />
+              <span class="align-middle ml-50">My Delegations</span>
+            </b-dropdown-item>
+
+            <b-dropdown-item :to="`/${selected_chain.chain_name}/uptime/my`">
+              <feather-icon
+                icon="AirplayIcon"
+                size="16"
+              />
+              <span class="align-middle ml-50">My Validators</span>
+            </b-dropdown-item>
+
+            <b-dropdown-item :to="`/wallet/votes`">
+              <feather-icon
+                icon="PocketIcon"
+                size="16"
+              />
+              <span class="align-middle ml-50">My Votes</span>
+            </b-dropdown-item>
+
+            <b-dropdown-item :to="`/wallet/transactions`">
+              <feather-icon
+                icon="LayersIcon"
+                size="16"
+              />
+              <span class="align-middle ml-50">My Transactions</span>
+            </b-dropdown-item>
+          </b-dropdown>
         </b-navbar-nav>
       </b-collapse>
-    </b-container>
+
+      <!-- <dark-Toggler class="d-none d-lg-block" /> -->
+    </div>
   </b-navbar>
 
 </template>
 
 <script>
 import {
-  BNavbarNav, BMedia, BMediaAside, BAvatar, BMediaBody, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BContainer,
+  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import DarkToggler from '@core/layouts/components/app-navbar/components/DarkToggler.vue'
@@ -80,7 +170,6 @@ import { getLocalAccounts, timeIn, toDay } from '@/libs/utils'
 
 export default {
   components: {
-    BContainer,
     BNavbar,
     BNavForm,
     BCollapse,
@@ -89,9 +178,6 @@ export default {
     BNavbarBrand,
     BNavItem,
     BAvatar,
-    BMedia,
-    BMediaAside,
-    BMediaBody,
     BButton,
     BDropdown,
     BDropdownItem,
