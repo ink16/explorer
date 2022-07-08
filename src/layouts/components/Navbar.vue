@@ -7,21 +7,19 @@
   <!-- Right Col -->
   <b-navbar
     toggleable="lg"
-    type="dark"
+    type="white"
     :variant="info"
     class="header-navbar navbar navbar-shadow"
   >
     <div class="navbar-container d-flex content">
-
+      <b-img
+        src="/logos/humans.svg"
+        alt="humans logo"
+      />
       <!-- Left Col -->
-      <div class="bookmark-wrapper align-items-center d-none d-lg-flex">
-        <b-navbar-brand href="#">
-          Explorer | Humans.ai
-        </b-navbar-brand>
-      </div>
+      <div class="bookmark-wrapper align-items-center d-none d-lg-flex" />
 
       <!-- Middle Col-->
-      <b-navbar-toggle target="nav-collapse" />
       <b-collapse
         id="nav-collapse"
         is-nav
@@ -149,7 +147,10 @@
           </b-dropdown>
         </b-navbar-nav>
       </b-collapse>
-
+      <b-navbar-toggle
+        target="nav-collapse"
+        class="ml-auto"
+      />
       <!-- <dark-Toggler class="d-none d-lg-block" /> -->
     </div>
   </b-navbar>
@@ -158,7 +159,7 @@
 
 <script>
 import {
-  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar,
+  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import DarkToggler from '@core/layouts/components/app-navbar/components/DarkToggler.vue'
@@ -170,6 +171,7 @@ import { getLocalAccounts, timeIn, toDay } from '@/libs/utils'
 
 export default {
   components: {
+    BImg,
     BNavbar,
     BNavForm,
     BCollapse,
@@ -206,6 +208,7 @@ export default {
       tips: 'Synced',
       index: 0,
       chainid: '',
+      image,
     }
   },
   computed: {
