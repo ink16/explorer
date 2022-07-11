@@ -88,12 +88,12 @@ export default {
       marketData: null,
       chain: {
         title: '',
-        class: 'border-primary',
+        class: '',
         items: [
-          { subtitle: 'height', icon: 'BoxIcon', color: 'light-success' },
-          { subtitle: 'bonded_and_supply', icon: 'DollarSignIcon', color: 'light-danger' },
-          { subtitle: 'bonded_ratio', icon: 'PercentIcon', color: 'light-warning' },
-          { subtitle: 'inflation', icon: 'TrendingUpIcon', color: 'light-primary' },
+          { subtitle: 'height', icon: 'BoxIcon', color: 'primary' },
+          { subtitle: 'bonded_and_supply', icon: 'DollarSignIcon', color: 'primary' },
+          { subtitle: 'bonded_ratio', icon: 'PercentIcon', color: 'primary' },
+          { subtitle: 'inflation', icon: 'TrendingUpIcon', color: 'primary' },
         ],
       },
       staking: {

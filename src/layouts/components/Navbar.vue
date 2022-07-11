@@ -7,7 +7,7 @@
   <!-- Right Col -->
   <b-navbar
     toggleable="lg"
-    class="header-navbar navbar navbar-shadow"
+    class="header-navbar navbar m-2"
   >
     <div class="navbar-container d-flex content">
       <b-img

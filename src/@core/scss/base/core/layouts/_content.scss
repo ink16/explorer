@@ -313,7 +313,7 @@ html {
           100vw - (100vw - 100%) - calc(#{$content-padding} * 2)
         ) !important; // ? override all navbar type width
       }
-      width: 100%; // Full width for other nav options
+      //width: 100%; // Full width for other nav options
       left: 0 !important;
     }
     .content,
