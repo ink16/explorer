@@ -7,17 +7,15 @@
   <!-- Right Col -->
   <b-navbar
     toggleable="lg"
-    type="white"
-    :variant="info"
     class="header-navbar navbar navbar-shadow"
   >
     <div class="navbar-container d-flex content">
       <b-img
         src="/logos/humans.svg"
         alt="humans logo"
+        width="350"
       />
       <!-- Left Col -->
-      <div class="bookmark-wrapper align-items-center d-none d-lg-flex" />
 
       <!-- Middle Col-->
       <b-collapse
@@ -25,8 +23,15 @@
         is-nav
       >
         <!-- Nav Menu Toggler -->
-        <b-navbar-nav class="mx-auto">
-          <b-nav-item href="#">
+        <b-nav
+          pills
+          class="mx-auto"
+        >
+          <b-nav-item
+            active
+            href="#"
+            class="bg-black"
+          >
             Summary
           </b-nav-item>
           <b-nav-item href="#">
@@ -44,8 +49,7 @@
           <b-nav-item href="#">
             State Sync
           </b-nav-item>
-
-        </b-navbar-nav>
+        </b-nav>
 
         <!-- Right aligned nav items -->
         <!--<b-navbar-nav class="ml-auto">
@@ -61,7 +65,7 @@
             variant="link"
             no-caret
             toggle-class="p-0"
-            right
+            left
           >
 
             <template #button-content>
@@ -149,7 +153,8 @@
       </b-collapse>
       <b-navbar-toggle
         target="nav-collapse"
-        class="ml-auto"
+        class="ml-auto base"
+        type="base"
       />
       <!-- <dark-Toggler class="d-none d-lg-block" /> -->
     </div>
@@ -159,7 +164,7 @@
 
 <script>
 import {
-  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg,
+  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg, BNav,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import DarkToggler from '@core/layouts/components/app-navbar/components/DarkToggler.vue'
@@ -171,6 +176,7 @@ import { getLocalAccounts, timeIn, toDay } from '@/libs/utils'
 
 export default {
   components: {
+    BNav,
     BImg,
     BNavbar,
     BNavForm,
@@ -208,7 +214,6 @@ export default {
       tips: 'Synced',
       index: 0,
       chainid: '',
-      image,
     }
   },
   computed: {
