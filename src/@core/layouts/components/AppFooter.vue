@@ -1,35 +1,39 @@
 <template>
-  <b-container>
+  <b-container class="pb-3">
     <span class="float-md-left d-none d-md-block d-md-inline-block">
-      <b-link
-        class="mr-25 font-weight-bolder"
-        href="#"
-        target="_blank"
-      >Humans.ai</b-link>
-      | Explorer
+      <b-img
+        src="/logos/humans.svg"
+        alt="humans logo"
+        width="350"
+      />
     </span>
 
     <span class="float-md-right d-none d-md-block d-md-inline-block">
       <b-link
-        class="mr-50 font-weight-bolder"
+        class="mr-50 "
         href="#"
         target="_blank"
-      >About us</b-link>
+      >Summary</b-link>
       <b-link
-        class="ml-50 mr-50 font-weight-bolder"
+        class="ml-50 mr-50 "
         href="#"
         target="_blank"
-      >Contact</b-link>
+      >Blocks</b-link>
       <b-link
-        class="ml-50 mr-50 font-weight-bolder"
+        class="ml-50 mr-50 "
         href="#"
         target="_blank"
-      >Jobs</b-link>
+      >Staking</b-link>
       <b-link
-        class="ml-50 font-weight-bolder"
+        class="ml-50 "
         href="#"
         target="_blank"
-      >Press kit</b-link>
+      >Governance</b-link>
+      <b-link
+        class="ml-50 "
+        href="#"
+        target="_blank"
+      >Uptime</b-link>
     </span>
 
   </b-container>
@@ -37,14 +41,14 @@
 
 <script>
 import {
-  BLink, VBPopover, BContainer, BRow, BCol,
+  BLink, VBPopover, BContainer, BRow, BCol, BImg,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 
 export default {
   name: 'AppFooter',
   components: {
-    BLink, BContainer, BRow, BCol,
+    BLink, BContainer, BRow, BCol, BImg,
   },
   directives: {
     'b-popover': VBPopover,
