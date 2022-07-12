@@ -11,7 +11,7 @@
     <span class="float-md-right d-none d-md-block d-md-inline-block">
       <b-link
         class="mr-50 "
-        href="#"
+        href="agoric"
         target="_blank"
       >Summary</b-link>
       <b-link

@@ -25,35 +25,35 @@
         <!-- Nav Menu Toggler -->
         <b-navbar-nav class="mx-auto">
           <b-nav-item
-            class="app-nav-link"
-            :to="{ name: 'agoric' }"
-            :class="{active: $route.name==='summary'}"
+            class="app-nav-link mr-1"
+            href="/agoric"
+            :class="{active: $route.name==='agoric'}"
           >
             Summary
           </b-nav-item>
           <b-nav-item
-            class="app-nav-link"
+            class="app-nav-link mr-1"
             :to="{ name:'blocks' }"
             :class="{active: $route.name==='blocks'}"
           >
             Blocks
           </b-nav-item>
           <b-nav-item
-            class="app-nav-link"
+            class="app-nav-link mr-1"
             :to="{ name:'staking' }"
             :class="{active: $route.name==='staking'}"
           >
             Staking
           </b-nav-item>
           <b-nav-item
-            class="app-nav-link"
+            class="app-nav-link mr-1"
             :to="{ name:'governance' }"
             :class="{active: $route.name==='governance'}"
           >
             Governance
           </b-nav-item>
           <b-nav-item
-            class="app-nav-link"
+            class="app-nav-link mr-1"
             :to="{ name:'uptime' }"
             :class="{active: $route.name==='uptime'}"
           >

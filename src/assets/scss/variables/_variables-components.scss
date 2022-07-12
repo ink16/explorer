@@ -70,6 +70,11 @@ display: flex;
   -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0 ,0.05);
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0 ,0.05);
 }
+.loading .effect-1,
+.loading .effect-2 {
+  border-color: $primary;
+  border-left-color: $primary;
+}
 
 footer a {
   color: $gray-600;
