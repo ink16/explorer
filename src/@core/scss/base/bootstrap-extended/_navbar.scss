@@ -255,11 +255,6 @@
           }
         }
 
-        > a.nav-link {
-          color: $body-color;
-          padding: 0 0.5rem;
-          position: relative;
-        }
 
         &.dropdown-user {
           line-height: 1 !important; // Set due to custom 2 line component in navbar
@@ -420,11 +415,7 @@
   }
 
   .navbar-nav {
-    .active {
-      &.nav-link {
-        background-color: rgba($black, 0.03);
-      }
-    }
+
 
     .disabled {
       &.nav-link {
@@ -456,12 +447,6 @@
   .navbar-nav {
     li {
       line-height: 1;
-    }
-
-    .active {
-      &.nav-link {
-        background-color: rgba($white, 0.05);
-      }
     }
 
     .disabled {
@@ -536,23 +521,6 @@
   }
 
   // light navbar
-  .navbar-light {
-    .navbar-header {
-      .navbar-nav {
-        .nav-link {
-          color: $gray-600;
-        }
-      }
-    }
-
-    .navbar-container {
-      .navbar-nav {
-        .nav-link {
-          color: $gray-600;
-        }
-      }
-    }
-  }
 }
 
 // For Medium and down: iPad support for navbr

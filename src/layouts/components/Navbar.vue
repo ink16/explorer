@@ -23,33 +23,43 @@
         is-nav
       >
         <!-- Nav Menu Toggler -->
-        <b-nav
-          pills
-          class="mx-auto"
-        >
+        <b-navbar-nav class="mx-auto">
           <b-nav-item
-            active
-            href="#"
-            class="bg-black"
+            class="app-nav-link"
+            :to="{ name: 'agoric' }"
+            :class="{active: $route.name==='summary'}"
           >
             Summary
           </b-nav-item>
-          <b-nav-item href="#">
+          <b-nav-item
+            class="app-nav-link"
+            :to="{ name:'blocks' }"
+            :class="{active: $route.name==='blocks'}"
+          >
             Blocks
           </b-nav-item>
-          <b-nav-item href="#">
+          <b-nav-item
+            class="app-nav-link"
+            :to="{ name:'staking' }"
+            :class="{active: $route.name==='staking'}"
+          >
             Staking
           </b-nav-item>
-          <b-nav-item href="#">
+          <b-nav-item
+            class="app-nav-link"
+            :to="{ name:'governance' }"
+            :class="{active: $route.name==='governance'}"
+          >
             Governance
           </b-nav-item>
-          <b-nav-item href="#">
+          <b-nav-item
+            class="app-nav-link"
+            :to="{ name:'uptime' }"
+            :class="{active: $route.name==='uptime'}"
+          >
             Uptime
           </b-nav-item>
-          <b-nav-item href="#">
-            State Sync
-          </b-nav-item>
-        </b-nav>
+        </b-navbar-nav>
 
         <!-- Right aligned nav items -->
         <!--<b-navbar-nav class="ml-auto">
@@ -164,7 +174,7 @@
 
 <script>
 import {
-  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg, BNav,
+  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import DarkToggler from '@core/layouts/components/app-navbar/components/DarkToggler.vue'
@@ -176,7 +186,6 @@ import { getLocalAccounts, timeIn, toDay } from '@/libs/utils'
 
 export default {
   components: {
-    BNav,
     BImg,
     BNavbar,
     BNavForm,
