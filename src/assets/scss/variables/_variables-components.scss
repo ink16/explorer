@@ -76,6 +76,10 @@ display: flex;
   border-left-color: $primary;
 }
 
+.card h4 {
+  color: $black;
+}
+
 footer a {
   color: $gray-600;
 }
