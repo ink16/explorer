@@ -148,7 +148,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/:chain/uptime',
+      path: '/uptime',
       name: 'uptime',
       component: () => import('@/views/Uptime.vue'),
       meta: {
@@ -198,7 +198,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/:chain/staking',
+      path: '/staking',
       name: 'staking',
       component: () => import('@/views/Staking.vue'),
       meta: {
@@ -230,7 +230,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/:chain/gov',
+      path: '/gov',
       name: 'governance',
       component: () => import('@/views/Governance.vue'),
       meta: {
@@ -266,7 +266,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/:chain/blocks',
+      path: '/blocks',
       name: 'blocks',
       component: () => import('@/views/Blocks.vue'),
       meta: {

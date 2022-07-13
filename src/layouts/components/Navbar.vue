@@ -26,8 +26,8 @@
         <b-navbar-nav class="mx-auto">
           <b-nav-item
             class="app-nav-link mr-1"
-            href="/agoric"
-            :class="{active: $route.name==='agoric'}"
+            href="/"
+            :class="{active: $route.name==='home'}"
           >
             Summary
           </b-nav-item>
