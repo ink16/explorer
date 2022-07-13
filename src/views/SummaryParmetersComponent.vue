@@ -67,9 +67,9 @@
               <b-card-text class="font-small-3 mb-0 text-capitalize">
                 {{ item.subtitle }}
               </b-card-text>
-              <h4 class="font-weight-bolder mb-1">
+              <h5 class="font-weight-bolder mb-1">
                 {{ item.title || '-' }}
-              </h4>
+              </h5>
             </b-media-body>
           </b-media>
         </b-col>

@@ -14,9 +14,8 @@ const router = new VueRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/views/Home.vue'),
+      component: () => import('@/views/Summary.vue'),
       meta: {
-        layout: 'full',
         pageTitle: 'Home',
         breadcrumb: [
           {
@@ -122,8 +121,9 @@ const router = new VueRouter({
       path: '/:chain/',
       name: 'info',
       alias: '/:chain',
-      component: () => import('@/views/Summary.vue'),
+      component: () => import('@/views/Home.vue'),
       meta: {
+        layout: 'full',
         pageTitle: 'Home',
         breadcrumb: [
           {

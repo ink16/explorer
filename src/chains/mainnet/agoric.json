@@ -10,13 +10,13 @@
         "base": "ubld",
         "symbol": "BLD",
         "exponent": "6",
-        "coingecko_id": "", 
+        "coingecko_id": "",
         "logo": ""
     },{
         "base": "urun",
         "symbol": "RUN",
         "exponent": "6",
-        "coingecko_id": "", 
+        "coingecko_id": "",
         "logo": ""
     }],
     "addr_prefix": "agoric",

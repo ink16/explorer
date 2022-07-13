@@ -76,8 +76,12 @@ display: flex;
   border-left-color: $primary;
 }
 
-.card h4 {
+.card h5 {
   color: $black;
+}
+
+table th{
+  background-color: #FFFFFF;
 }
 
 footer a {
