@@ -13,13 +13,13 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'summary',
       component: () => import('@/views/Summary.vue'),
       meta: {
-        pageTitle: 'Home',
+        pageTitle: 'Summary',
         breadcrumb: [
           {
-            text: 'Home',
+            text: 'Summary',
             active: true,
           },
         ],

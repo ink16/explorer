@@ -4,7 +4,7 @@
       <b-img
         src="/logos/humans.svg"
         alt="humans logo"
-        width="350"
+        width="40"
       />
     </span>
 

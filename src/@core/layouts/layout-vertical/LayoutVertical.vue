@@ -7,12 +7,10 @@
     <!-- Navbar -->
     <slot
       name="navbar"
-      :toggle-vertical-menu-active="toggleVerticalMenuActive"
-      :navbar-background-color="navbarBackgroundColor"
-      :navbar-type-class="[...navbarTypeClass, 'header-navbar navbar navbar-shadow align-items-center']"
     >
       <app-navbar-vertical-layout :toggle-vertical-menu-active="toggleVerticalMenuActive" />
     </slot>
+
     <!--/ Navbar -->
 
     <!-- Content -->

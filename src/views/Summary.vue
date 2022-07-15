@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <b-container>
     <b-alert
       variant="danger"
       :show="syncing"
@@ -56,12 +56,12 @@
         <summary-parmeters-component :data="slashing" />
       </b-col>
     </b-row>
-  </div>
+  </b-container>
 </template>
 
 <script>
 import {
-  BRow, BCol, BAlert, BCard,
+  BRow, BCol, BAlert, BCard, BContainer,
 } from 'bootstrap-vue'
 import {
   formatNumber, formatTokenAmount, getUserCurrency, isToken, percent, timeIn, toDay, toDuration, tokenFormatter,
@@ -73,6 +73,7 @@ import SummaryPriceChart from './SummaryPriceChart.vue'
 
 export default {
   components: {
+    BContainer,
     BRow,
     BCol,
     BAlert,

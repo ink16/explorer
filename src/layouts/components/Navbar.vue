@@ -5,16 +5,23 @@
 
   <!-- <dark-Toggler class="d-none d-lg-block" /> -->
   <!-- Right Col -->
+
+  <!--add  fixed="top" for sticky navbar-->
   <b-navbar
     toggleable="lg"
-    class="header-navbar navbar m-2"
+    class="header-navbar m-2 navbar-expand-lg"
   >
     <div class="navbar-container d-flex content">
-      <b-img
+      <b-navbar-toggle
+        target="nav-collapse"
+        class="mr-auto base"
+        type="base"
+      />
+      <!--<b-img
         src="/logos/humans.svg"
         alt="humans logo"
-        width="350"
-      />
+        width="40"
+      / -->
       <!-- Left Col -->
 
       <!-- Middle Col-->
@@ -27,7 +34,7 @@
           <b-nav-item
             class="app-nav-link mr-1"
             href="/"
-            :class="{active: $route.name==='home'}"
+            :class="{active: $route.name==='summary'}"
           >
             Summary
           </b-nav-item>
@@ -161,11 +168,6 @@
           </b-dropdown>
         </b-navbar-nav>
       </b-collapse>
-      <b-navbar-toggle
-        target="nav-collapse"
-        class="ml-auto base"
-        type="base"
-      />
       <!-- <dark-Toggler class="d-none d-lg-block" /> -->
     </div>
   </b-navbar>
@@ -174,7 +176,7 @@
 
 <script>
 import {
-  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg,
+  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import DarkToggler from '@core/layouts/components/app-navbar/components/DarkToggler.vue'
@@ -186,7 +188,6 @@ import { getLocalAccounts, timeIn, toDay } from '@/libs/utils'
 
 export default {
   components: {
-    BImg,
     BNavbar,
     BNavForm,
     BCollapse,
