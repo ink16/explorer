@@ -25,6 +25,9 @@
   align-self: stretch;
   flex-grow: 0;
 }
+#nav-collapse {
+  z-index: 9999;
+}
 
 .nav-link {
   color: $primary;

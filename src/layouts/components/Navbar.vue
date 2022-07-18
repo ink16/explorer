@@ -17,13 +17,12 @@
         class="mr-auto base"
         type="base"
       />
-      <!--<b-img
+      <b-img
         src="/logos/humans.svg"
         alt="humans logo"
-        width="40"
-      / -->
+        class="d-none d-lg-block"
+      />
       <!-- Left Col -->
-
       <!-- Middle Col-->
       <b-collapse
         id="nav-collapse"
@@ -169,6 +168,11 @@
         </b-navbar-nav>
       </b-collapse>
       <!-- <dark-Toggler class="d-none d-lg-block" /> -->
+      <b-img
+        src="/logos/humans-mobile.svg"
+        alt="humans logo"
+        class="d-lg-none mr-auto ml-0"
+      />
     </div>
   </b-navbar>
 
@@ -176,7 +180,7 @@
 
 <script>
 import {
-  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar,
+  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import DarkToggler from '@core/layouts/components/app-navbar/components/DarkToggler.vue'
@@ -188,6 +192,7 @@ import { getLocalAccounts, timeIn, toDay } from '@/libs/utils'
 
 export default {
   components: {
+    BImg,
     BNavbar,
     BNavForm,
     BCollapse,
