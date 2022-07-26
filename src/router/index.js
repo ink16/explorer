@@ -13,13 +13,13 @@ const router = new VueRouter({
   routes: [
     {
       path: '/',
-      name: 'summary',
-      component: () => import('@/views/Summary.vue'),
+      name: 'home',
+      component: () => import('@/views/Home.vue'),
       meta: {
-        pageTitle: 'Summary',
+        pageTitle: 'home',
         breadcrumb: [
           {
-            text: 'Summary',
+            text: 'home',
             active: true,
           },
         ],
@@ -119,15 +119,14 @@ const router = new VueRouter({
     // chain modules
     {
       path: '/:chain/',
-      name: 'info',
-      alias: '/:chain',
-      component: () => import('@/views/Home.vue'),
+      name: 'summary',
+      alias: 'summary',
+      component: () => import('@/views/Summary.vue'),
       meta: {
-        layout: 'full',
-        pageTitle: 'Home',
+        pageTitle: 'Summary',
         breadcrumb: [
           {
-            text: 'Home',
+            text: 'Summary',
             active: true,
           },
         ],
@@ -148,7 +147,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/uptime',
+      path: '/:chain/uptime',
       name: 'uptime',
       component: () => import('@/views/Uptime.vue'),
       meta: {
@@ -198,7 +197,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/staking',
+      path: '/:chain/staking',
       name: 'staking',
       component: () => import('@/views/Staking.vue'),
       meta: {
@@ -230,7 +229,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/gov',
+      path: '/:chain/governance',
       name: 'governance',
       component: () => import('@/views/Governance.vue'),
       meta: {
@@ -266,7 +265,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/blocks',
+      path: '/:chain/blocks',
       name: 'blocks',
       component: () => import('@/views/Blocks.vue'),
       meta: {

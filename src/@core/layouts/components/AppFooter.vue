@@ -12,27 +12,27 @@
         <div class="d-flex">
           <b-link
             class="mr-50"
-            href="agoric"
+            href="devnet"
             target="_blank"
           >Summary</b-link>
           <b-link
             class="ml-50 mr-50"
-            href="#"
+            href="devnet/blocks"
             target="_blank"
           >Blocks</b-link>
           <b-link
             class="ml-50 mr-50"
-            href="#"
+            href="devnet/staking"
             target="_blank"
           >Staking</b-link>
           <b-link
             class="ml-50"
-            href="#"
+            href="devnet/governance"
             target="_blank"
           >Governance</b-link>
           <b-link
             class="ml-50"
-            href="#"
+            href="devnet/uptime"
             target="_blank"
           >Uptime</b-link>
         </div>

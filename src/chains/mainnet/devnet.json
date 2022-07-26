@@ -1,5 +1,5 @@
 {
-    "chain_name": "agoric",
+    "chain_name": "devnet",
     "api": ["https://api.agoric.sgtstake.com", "https://main.api.agoric.net"],
     "rpc": ["https://main.rpc.agoric.net:443", "https://main.rpc.agoric.net:443"],
     "snapshot_provider": "",
@@ -19,6 +19,6 @@
         "coingecko_id": "",
         "logo": ""
     }],
-    "addr_prefix": "agoric",
+    "addr_prefix": "devnet",
     "logo": "/logos/agoric.png"
 }

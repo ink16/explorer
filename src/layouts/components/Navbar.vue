@@ -32,35 +32,35 @@
         <b-navbar-nav class="mx-auto">
           <b-nav-item
             class="app-nav-link mr-1"
-            href="/"
+            href="/devnet"
             :class="{active: $route.name==='summary'}"
           >
             Summary
           </b-nav-item>
           <b-nav-item
             class="app-nav-link mr-1"
-            :to="{ name:'blocks' }"
+            href="/devnet/blocks"
             :class="{active: $route.name==='blocks'}"
           >
             Blocks
           </b-nav-item>
           <b-nav-item
             class="app-nav-link mr-1"
-            :to="{ name:'staking' }"
+            href="/devnet/staking"
             :class="{active: $route.name==='staking'}"
           >
             Staking
           </b-nav-item>
           <b-nav-item
             class="app-nav-link mr-1"
-            :to="{ name:'governance' }"
+            href="/devnet/governance"
             :class="{active: $route.name==='governance'}"
           >
             Governance
           </b-nav-item>
           <b-nav-item
             class="app-nav-link mr-1"
-            :to="{ name:'uptime' }"
+            href="/devnet/uptime"
             :class="{active: $route.name==='uptime'}"
           >
             Uptime
