@@ -1,41 +1,67 @@
 <template>
-  <b-container class="pb-3">
-    <span class="float-md-left d-none d-md-block d-md-inline-block">
-      <b-img
-        src="/logos/humans.svg"
-        alt="humans logo"
-        width="40"
-      />
-    </span>
+  <b-container class="pb-1">
+    <div class="d-flex justify-content-between">
+      <div class="d-none d-md-block d-md-inline-block">
+        <b-img
+          src="/logos/humans.svg"
+          alt="humans logo"
+          width=""
+        />
+      </div>
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="d-flex">
+          <b-link
+            class="mr-50"
+            href="agoric"
+            target="_blank"
+          >Summary</b-link>
+          <b-link
+            class="ml-50 mr-50"
+            href="#"
+            target="_blank"
+          >Blocks</b-link>
+          <b-link
+            class="ml-50 mr-50"
+            href="#"
+            target="_blank"
+          >Staking</b-link>
+          <b-link
+            class="ml-50"
+            href="#"
+            target="_blank"
+          >Governance</b-link>
+          <b-link
+            class="ml-50"
+            href="#"
+            target="_blank"
+          >Uptime</b-link>
+        </div>
+        <div class="d-flex">
+          <b-link
+            class="ml-50 mr-50"
+            href="#"
+            target="_blank"
+          ><feather-icon
+            icon="GithubIcon"
+            size="16"
+          /> Github</b-link>
+          <b-link
+            class="mr-50"
+            href="agoric"
+            target="_blank"
+          >Discord</b-link>
+          <b-link
+            class="ml-50 mr-50"
+            href="#"
+            target="_blank"
+          ><feather-icon
+            icon="TwitterIcon"
+            size="16"
+          /> Twitter</b-link>
 
-    <span class="float-md-right d-none d-md-block d-md-inline-block">
-      <b-link
-        class="mr-50 "
-        href="agoric"
-        target="_blank"
-      >Summary</b-link>
-      <b-link
-        class="ml-50 mr-50 "
-        href="#"
-        target="_blank"
-      >Blocks</b-link>
-      <b-link
-        class="ml-50 mr-50 "
-        href="#"
-        target="_blank"
-      >Staking</b-link>
-      <b-link
-        class="ml-50 "
-        href="#"
-        target="_blank"
-      >Governance</b-link>
-      <b-link
-        class="ml-50 "
-        href="#"
-        target="_blank"
-      >Uptime</b-link>
-    </span>
-
+        </div>
+      </div>
+    </div>
   </b-container>
 </template>
 
@@ -48,7 +74,11 @@ import Ripple from 'vue-ripple-directive'
 export default {
   name: 'AppFooter',
   components: {
-    BLink, BContainer, BRow, BCol, BImg,
+    BLink,
+    BContainer,
+    BRow,
+    BCol,
+    BImg,
   },
   directives: {
     'b-popover': VBPopover,
