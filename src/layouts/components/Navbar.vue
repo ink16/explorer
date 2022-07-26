@@ -81,7 +81,7 @@
             variant="link"
             no-caret
             toggle-class="p-0"
-            left
+            right
           >
 
             <template #button-content>
