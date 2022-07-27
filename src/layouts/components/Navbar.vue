@@ -9,7 +9,7 @@
   <!--add  fixed="top" for sticky navbar-->
   <b-navbar
     toggleable="lg"
-    class="header-navbar m-2 navbar-expand-lg"
+    class="header-navbar my-2 navbar-expand-lg"
   >
     <div class="navbar-container d-flex content">
       <b-navbar-toggle

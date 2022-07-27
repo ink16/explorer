@@ -5,11 +5,20 @@
     :data-col="'1-column'"
   >
     <!-- Navbar -->
-    <slot
-      name="navbar"
-    >
-      <app-navbar-vertical-layout :toggle-vertical-menu-active="toggleVerticalMenuActive" />
-    </slot>
+    <b-container>
+      <b-row class="align-items-center justify-content-center">
+        <b-col
+          cols="12"
+          sm="11"
+        >
+          <slot
+            name="navbar"
+          >
+            <app-navbar-vertical-layout :toggle-vertical-menu-active="toggleVerticalMenuActive" />
+          </slot>
+        </b-col>
+      </b-row>
+    </b-container>
 
     <!--/ Navbar -->
 
@@ -57,7 +66,9 @@ import { onUnmounted } from '@vue/composition-api'
 import AppNavbarVerticalLayout from '@core/layouts/components/app-navbar/AppNavbarVerticalLayout.vue'
 import AppFooter from '@core/layouts/components/AppFooter.vue'
 import useAppConfig from '@core/app-config/useAppConfig'
-import { BNavbar } from 'bootstrap-vue'
+import {
+  BNavbar, BContainer, BRow, BCol,
+} from 'bootstrap-vue'
 import LayoutContentRendererDefault from '@core/layouts/components/layout-content-renderer/LayoutContentRendererDefault.vue'
 import LayoutContentRendererLeft from '@core/layouts/components/layout-content-renderer/LayoutContentRendererLeft.vue'
 import LayoutContentRendererLeftDetached from '@core/layouts/components/layout-content-renderer/LayoutContentRendererLeftDetached.vue'
@@ -72,6 +83,9 @@ export default {
     AppFooter,
     VerticalNavMenu,
     BNavbar,
+    BContainer,
+    BRow,
+    BCol,
     LayoutContentRendererLeftDetached,
     LayoutContentRendererLeft,
     LayoutContentRendererDefault,
