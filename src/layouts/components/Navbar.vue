@@ -11,17 +11,25 @@
     toggleable="lg"
     class="header-navbar my-2 navbar-expand-lg"
   >
+
     <div class="navbar-container d-flex content">
-      <b-navbar-toggle
-        target="nav-collapse"
-        class="mr-auto base"
-        type="base"
-      />
-      <b-img
-        src="/logos/humans.svg"
-        alt="humans logo"
-        class="d-none d-lg-block"
-      />
+      <div class="d-flex justify-content-start">
+        <b-navbar-toggle
+          target="nav-collapse"
+          class="mr-auto base"
+          type="base"
+        />
+        <b-img
+          src="/logos/humans.svg"
+          alt="humans logo"
+          class="d-none d-xl-flex img-fluid"
+        />
+        <div class="d-flex align-items-center justify-content-center pl-1"><b-img
+          src="/logos/humans-mobile.svg"
+          alt="humans logo"
+          class="d-xl-none"
+        /></div>
+      </div>
       <!-- Left Col -->
       <!-- Middle Col-->
       <b-collapse
@@ -72,11 +80,11 @@
           x
         </b-navbar-nav>-->
         <!-- Right Col -->
-        <b-navbar-nav class="nav align-items-center">
-          <dark-Toggler class="d-none d-lg-block" />
+        <b-navbar-nav class="nav align-items-center d-flex flex-nowrap">
           <search-bar />
           <locale />
-          <b-dropdown
+          test
+          <!--<b-dropdown
             class="ml-1"
             variant="link"
             no-caret
@@ -164,15 +172,10 @@
               />
               <span class="align-middle ml-50">My Transactions</span>
             </b-dropdown-item>
-          </b-dropdown>
+          </b-dropdown> -->
         </b-navbar-nav>
       </b-collapse>
       <!-- <dark-Toggler class="d-none d-lg-block" /> -->
-      <b-img
-        src="/logos/humans-mobile.svg"
-        alt="humans logo"
-        class="d-lg-none mr-auto ml-0"
-      />
     </div>
   </b-navbar>
 

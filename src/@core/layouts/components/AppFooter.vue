@@ -17,27 +17,27 @@
             <div class="d-flex">
               <b-link
                 class="mr-50"
-                href="devnet"
+                href="/devnet"
                 target="_blank"
               >Summary</b-link>
               <b-link
                 class="ml-50 mr-50"
-                href="devnet/blocks"
+                href="/devnet/blocks"
                 target="_blank"
               >Blocks</b-link>
               <b-link
                 class="ml-50 mr-50"
-                href="devnet/staking"
+                href="/devnet/staking"
                 target="_blank"
               >Staking</b-link>
               <b-link
                 class="ml-50"
-                href="devnet/governance"
+                href="/devnet/governance"
                 target="_blank"
               >Governance</b-link>
               <b-link
                 class="ml-50"
-                href="devnet/uptime"
+                href="/devnet/uptime"
                 target="_blank"
               >Uptime</b-link>
             </div>
@@ -52,12 +52,12 @@
               /> Github</b-link>
               <b-link
                 class="mr-50"
-                href="agoric"
+                href="https://discord.gg/humansdotai"
                 target="_blank"
               >Discord</b-link>
               <b-link
                 class="ml-50 mr-50"
-                href="#"
+                href="https://twitter.com/humansdotai"
                 target="_blank"
               ><feather-icon
                 icon="TwitterIcon"
