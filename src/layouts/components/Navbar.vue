@@ -81,10 +81,8 @@
         </b-navbar-nav>-->
         <!-- Right Col -->
         <b-navbar-nav class="nav align-items-center d-flex flex-nowrap">
-          <search-bar />
-          <locale />
-          test
-          <!--<b-dropdown
+          <search-bar class="d-none d-lg-flex" />
+          <b-dropdown
             class="ml-1"
             variant="link"
             no-caret
@@ -172,9 +170,12 @@
               />
               <span class="align-middle ml-50">My Transactions</span>
             </b-dropdown-item>
-          </b-dropdown> -->
+          </b-dropdown>
         </b-navbar-nav>
       </b-collapse>
+      <div class="d-flex align-items-center justify-content-end ml-auto">
+        <search-bar class="d-lg-none" />
+      </div>
       <!-- <dark-Toggler class="d-none d-lg-block" /> -->
     </div>
   </b-navbar>
