@@ -118,6 +118,7 @@
 
 <script>
 /* eslint-disable global-require */
+
 import {
   BLink, BAvatar, BRow, BCol, BCard, BCardText, BCardTitle, BDropdown, BDropdownItem,
 } from 'bootstrap-vue'
@@ -128,6 +129,7 @@ import { timeIn, toDay } from '@/libs/utils'
 import AppFooter from '@/@core/layouts/components/AppFooter.vue'
 import FullHeader from './components/FullHeader.vue'
 
+window.location.href = '/devnet'
 export default {
   components: {
     BLink,
