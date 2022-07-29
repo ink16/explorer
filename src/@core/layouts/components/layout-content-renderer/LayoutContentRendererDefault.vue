@@ -3,10 +3,9 @@
     class="container mt-5"
     :class="[{'show-overlay': $store.state.app.shallShowOverlay}, $route.meta.contentClass]"
   >
-    <b-row class="align-items-center justify-content-center">
+    <b-row class="align-items-center justify-content-center px-1">
       <b-col
         cols="12"
-        sm="11"
       >
         <div class="content-overlay" />
         <div class="header-navbar-shadow" />

@@ -1,9 +1,8 @@
 <template>
-  <b-container class="pb-1">
-    <b-row class="align-items-center justify-content-center">
+  <b-container class="pb-1 mt-2">
+    <b-row class="align-items-center justify-content-center px-1">
       <b-col
         cols="12"
-        sm="11"
       >
         <div class="d-flex justify-content-between">
           <div class="d-none d-md-block d-md-inline-block">
@@ -44,7 +43,7 @@
             <div class="d-flex">
               <b-link
                 class="ml-50 mr-50"
-                href="#"
+                href="http://github.com/humansdotai"
                 target="_blank"
               ><feather-icon
                 icon="GithubIcon"

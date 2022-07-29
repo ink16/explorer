@@ -6,10 +6,9 @@
   >
     <!-- Navbar -->
     <b-container>
-      <b-row class="align-items-center justify-content-center">
+      <b-row class="align-items-center justify-content-center px-1">
         <b-col
           cols="12"
-          sm="11"
         >
           <slot
             name="navbar"
