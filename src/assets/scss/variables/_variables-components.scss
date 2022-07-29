@@ -27,6 +27,17 @@
 #nav-collapse {
   z-index: 9999;
 }
+.navbar-collapse.collapse.show {
+        position:absolute;
+        padding:20px;
+        margin-top:80px;
+        background-color: white;
+        border-radius: 8px;
+        -webkit-box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0 ,0.05);
+        box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0 ,0.05);
+      }
+
+
 
 .nav-link {
   color: $primary;
@@ -89,3 +100,4 @@ table th{
 footer a {
   color: $gray-600;
 }
+

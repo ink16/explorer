@@ -12,7 +12,7 @@
     class="header-navbar my-2 navbar-expand-lg"
   >
 
-    <div class="navbar-container d-flex content">
+    <div class="navbar-container d-flex content justify-content-between">
       <div class="d-flex justify-content-start">
         <b-navbar-toggle
           target="nav-collapse"
@@ -24,7 +24,7 @@
           alt="humans logo"
           class="d-none d-xl-flex img-fluid"
         />
-        <div class="d-flex align-items-center justify-content-center pl-1"><b-img
+        <div class="d-flex align-items-center justify-content-center px-1"><b-img
           src="/logos/humans-mobile.svg"
           alt="humans logo"
           class="d-xl-none"
@@ -37,141 +37,143 @@
         is-nav
       >
         <!-- Nav Menu Toggler -->
-        <b-navbar-nav class="mx-auto">
-          <b-nav-item
-            class="app-nav-link mr-1"
-            href="/devnet"
-            :class="{active: $route.name==='summary'}"
-          >
-            Summary
-          </b-nav-item>
-          <b-nav-item
-            class="app-nav-link mr-1"
-            href="/devnet/blocks"
-            :class="{active: $route.name==='blocks'}"
-          >
-            Blocks
-          </b-nav-item>
-          <b-nav-item
-            class="app-nav-link mr-1"
-            href="/devnet/staking"
-            :class="{active: $route.name==='staking'}"
-          >
-            Staking
-          </b-nav-item>
-          <b-nav-item
-            class="app-nav-link mr-1"
-            href="/devnet/governance"
-            :class="{active: $route.name==='governance'}"
-          >
-            Governance
-          </b-nav-item>
-          <b-nav-item
-            class="app-nav-link mr-1"
-            href="/devnet/uptime"
-            :class="{active: $route.name==='uptime'}"
-          >
-            Uptime
-          </b-nav-item>
-        </b-navbar-nav>
+        <div class="d-flex flex-column flex-lg-row justify-content-between w-100">
+          <b-navbar-nav class="d-flex flex-column flex-lg-row align-items-start">
+            <b-nav-item
+              class="app-nav-link mr-1"
+              href="/devnet"
+              :class="{active: $route.name==='summary'}"
+            >
+              Summary
+            </b-nav-item>
+            <b-nav-item
+              class="app-nav-link mr-1"
+              href="/devnet/blocks"
+              :class="{active: $route.name==='blocks'}"
+            >
+              Blocks
+            </b-nav-item>
+            <b-nav-item
+              class="app-nav-link mr-1"
+              href="/devnet/staking"
+              :class="{active: $route.name==='staking'}"
+            >
+              Staking
+            </b-nav-item>
+            <b-nav-item
+              class="app-nav-link mr-1"
+              href="/devnet/governance"
+              :class="{active: $route.name==='governance'}"
+            >
+              Governance
+            </b-nav-item>
+            <b-nav-item
+              class="app-nav-link mr-1"
+              href="/devnet/uptime"
+              :class="{active: $route.name==='uptime'}"
+            >
+              Uptime
+            </b-nav-item>
+          </b-navbar-nav>
 
-        <!-- Right aligned nav items -->
-        <!--<b-navbar-nav class="ml-auto">
+          <!-- Right aligned nav items -->
+          <!--<b-navbar-nav class="ml-auto">
           x
         </b-navbar-nav>-->
-        <!-- Right Col -->
-        <b-navbar-nav class="nav align-items-center d-flex flex-nowrap">
-          <search-bar class="d-none d-lg-flex" />
-          <b-dropdown
-            class="ml-1"
-            variant="link"
-            no-caret
-            toggle-class="p-0"
-            right
-          >
-
-            <template #button-content>
-              <b-button
-                v-ripple.400="'rgba(255, 255, 255, 0.15)'"
-                variant="primary"
-                class="btn-icon"
-              >
-                <feather-icon icon="KeyIcon" />
-                {{ walletName }}
-              </b-button>
-            </template>
-
-            <b-dropdown-item
-              v-for="(item,k) in accounts"
-              :key="k"
-              :disabled="!item.address"
-              :to="`/${selected_chain.chain_name}/account/${item.address.addr}`"
-              @click="updateDefaultWallet(item.wallet)"
+          <!-- Right Col -->
+          <b-navbar-nav class="nav align-items-center d-flex flex-nowrap">
+            <search-bar class="d-none d-lg-flex" />
+            <b-dropdown
+              class="ml-1"
+              variant="link"
+              no-caret
+              toggle-class="p-0"
+              right
             >
-              <div class="d-flex flex-column">
-                <span class="font-weight-bolder">{{ item.wallet }}
-                  <b-avatar
-                    v-if="item.wallet===walletName"
-                    variant="success"
-                    size="sm"
-                  >
-                    <feather-icon icon="CheckIcon" />
-                  </b-avatar>
-                </span>
-                <small>{{ item.address ? formatAddr(item.address.addr) : `Not available on ${selected_chain.chain_name}` }}</small>
-              </div>
-            </b-dropdown-item>
-            <b-dropdown-divider />
-            <b-dropdown-item to="/wallet/import">
-              <feather-icon
-                icon="PlusIcon"
-                size="16"
-              />
-              <span class="align-middle ml-50">Import Address</span>
-            </b-dropdown-item>
-            <b-dropdown-divider />
 
-            <b-dropdown-item :to="{ name: 'accounts' }">
-              <feather-icon
-                icon="KeyIcon"
-                size="16"
-              />
-              <span class="align-middle ml-50">Accounts</span>
-            </b-dropdown-item>
+              <template #button-content>
+                <b-button
+                  v-ripple.400="'rgba(255, 255, 255, 0.15)'"
+                  variant="primary"
+                  class="btn-icon"
+                >
+                  <feather-icon icon="KeyIcon" />
+                  {{ walletName }}
+                </b-button>
+              </template>
 
-            <b-dropdown-item :to="{ name: 'delegations' }">
-              <feather-icon
-                icon="BookOpenIcon"
-                size="16"
-              />
-              <span class="align-middle ml-50">My Delegations</span>
-            </b-dropdown-item>
+              <b-dropdown-item
+                v-for="(item,k) in accounts"
+                :key="k"
+                :disabled="!item.address"
+                :to="`/${selected_chain.chain_name}/account/${item.address.addr}`"
+                @click="updateDefaultWallet(item.wallet)"
+              >
+                <div class="d-flex flex-column">
+                  <span class="font-weight-bolder">{{ item.wallet }}
+                    <b-avatar
+                      v-if="item.wallet===walletName"
+                      variant="success"
+                      size="sm"
+                    >
+                      <feather-icon icon="CheckIcon" />
+                    </b-avatar>
+                  </span>
+                  <small>{{ item.address ? formatAddr(item.address.addr) : `Not available on ${selected_chain.chain_name}` }}</small>
+                </div>
+              </b-dropdown-item>
+              <b-dropdown-divider />
+              <b-dropdown-item to="/wallet/import">
+                <feather-icon
+                  icon="PlusIcon"
+                  size="16"
+                />
+                <span class="align-middle ml-50">Import Address</span>
+              </b-dropdown-item>
+              <b-dropdown-divider />
 
-            <b-dropdown-item :to="`/${selected_chain.chain_name}/uptime/my`">
-              <feather-icon
-                icon="AirplayIcon"
-                size="16"
-              />
-              <span class="align-middle ml-50">My Validators</span>
-            </b-dropdown-item>
+              <b-dropdown-item :to="{ name: 'accounts' }">
+                <feather-icon
+                  icon="KeyIcon"
+                  size="16"
+                />
+                <span class="align-middle ml-50">Accounts</span>
+              </b-dropdown-item>
 
-            <b-dropdown-item :to="`/wallet/votes`">
-              <feather-icon
-                icon="PocketIcon"
-                size="16"
-              />
-              <span class="align-middle ml-50">My Votes</span>
-            </b-dropdown-item>
+              <b-dropdown-item :to="{ name: 'delegations' }">
+                <feather-icon
+                  icon="BookOpenIcon"
+                  size="16"
+                />
+                <span class="align-middle ml-50">My Delegations</span>
+              </b-dropdown-item>
 
-            <b-dropdown-item :to="`/wallet/transactions`">
-              <feather-icon
-                icon="LayersIcon"
-                size="16"
-              />
-              <span class="align-middle ml-50">My Transactions</span>
-            </b-dropdown-item>
-          </b-dropdown>
-        </b-navbar-nav>
+              <b-dropdown-item :to="`/${selected_chain.chain_name}/uptime/my`">
+                <feather-icon
+                  icon="AirplayIcon"
+                  size="16"
+                />
+                <span class="align-middle ml-50">My Validators</span>
+              </b-dropdown-item>
+
+              <b-dropdown-item :to="`/wallet/votes`">
+                <feather-icon
+                  icon="PocketIcon"
+                  size="16"
+                />
+                <span class="align-middle ml-50">My Votes</span>
+              </b-dropdown-item>
+
+              <b-dropdown-item :to="`/wallet/transactions`">
+                <feather-icon
+                  icon="LayersIcon"
+                  size="16"
+                />
+                <span class="align-middle ml-50">My Transactions</span>
+              </b-dropdown-item>
+            </b-dropdown>
+          </b-navbar-nav>
+        </div>
       </b-collapse>
       <div class="d-flex align-items-center justify-content-end ml-auto">
         <search-bar class="d-lg-none" />
