@@ -19,13 +19,11 @@
           class="mr-auto base"
           type="base"
         />
-        <b-link href="/devnet">
           <b-img
             src="/logos/humans.svg"
             alt="humans logo"
             class="d-none d-xl-flex img-fluid"
           />
-        </b-link>
 
         <div class="d-flex align-items-center justify-content-center px-1"><b-img
           src="/logos/humans-mobile.svg"
