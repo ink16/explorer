@@ -1,12 +1,12 @@
 {
-  "chain_name": "agoric-devnet",
+  "chain_name": "devnet",
   "api": [
-    "https://devnet.api.agoric.net"
+    "http://142.132.197.4:1317/"
   ],
   "rpc": [
-    "http://139.59.8.130:26657",
-    "http://46.101.220.43:26657",
-    "http://159.203.58.27:26657"
+    "http://142.132.197.4:26657/",
+    "http://142.132.197.4:26657/genesis?",
+    "http://142.132.197.4:26657/status?"
   ],
   "sdk_version": "0.45.1",
   "addr_prefix": "devnet",

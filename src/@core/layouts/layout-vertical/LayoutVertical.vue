@@ -47,7 +47,7 @@
 
     <!-- Footer -->
     <footer
-      class="footer footer-light"
+      class="footer footer-light mt-auto"
       :class="[footerTypeClass]"
     >
       <slot name="footer">
