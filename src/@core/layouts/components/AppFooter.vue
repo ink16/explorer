@@ -6,11 +6,13 @@
       >
         <div class="d-flex justify-content-between">
           <div class="d-none d-md-block d-md-inline-block">
-            <b-img
-              src="/logos/humans.svg"
-              alt="humans logo"
-              width=""
-            />
+            <b-link href="/devnet">
+              <b-img
+                src="/logos/humans.svg"
+                alt="humans logo"
+                width=""
+              />
+            </b-link>
           </div>
           <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="d-flex">

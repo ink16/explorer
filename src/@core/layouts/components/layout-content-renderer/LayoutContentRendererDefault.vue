@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container mt-5"
+    class="container mt-5 min-h-100vh"
     :class="[{'show-overlay': $store.state.app.shallShowOverlay}, $route.meta.contentClass]"
   >
     <b-row class="align-items-center justify-content-center px-1">
