@@ -16,11 +16,10 @@ const router = new VueRouter({
       name: 'home',
       component: () => import('@/views/Home.vue'),
       meta: {
-        layout: 'full',
-        pageTitle: 'Home',
+        pageTitle: 'home',
         breadcrumb: [
           {
-            text: 'Home',
+            text: 'home',
             active: true,
           },
         ],
@@ -120,14 +119,14 @@ const router = new VueRouter({
     // chain modules
     {
       path: '/:chain/',
-      name: 'info',
-      alias: '/:chain',
+      name: 'summary',
+      alias: 'summary',
       component: () => import('@/views/Summary.vue'),
       meta: {
-        pageTitle: 'Home',
+        pageTitle: 'Summary',
         breadcrumb: [
           {
-            text: 'Home',
+            text: 'Summary',
             active: true,
           },
         ],
@@ -230,7 +229,7 @@ const router = new VueRouter({
       },
     },
     {
-      path: '/:chain/gov',
+      path: '/:chain/governance',
       name: 'governance',
       component: () => import('@/views/Governance.vue'),
       meta: {

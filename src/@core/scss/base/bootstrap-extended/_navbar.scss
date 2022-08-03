@@ -108,11 +108,6 @@
   //*------------------------
 
   .navbar-container {
-    padding: 0.8rem 1rem;
-    // Added more horizontal padding above small screen
-    @include media-breakpoint-up(sm) {
-      padding: 0.8rem 1.4rem;
-    }
     flex-basis: 100%;
     transition: 300ms ease all;
     margin-left: 0;
@@ -255,11 +250,6 @@
           }
         }
 
-        > a.nav-link {
-          color: $body-color;
-          padding: 0 0.5rem;
-          position: relative;
-        }
 
         &.dropdown-user {
           line-height: 1 !important; // Set due to custom 2 line component in navbar
@@ -388,10 +378,6 @@
 
 // Floating Navbar
 .navbar-floating {
-  // Floating nav should have same padding across all screen
-  .navbar-container {
-    padding: 0.8rem 1rem;
-  }
   .header-navbar-shadow {
     display: block;
     background: linear-gradient(
@@ -403,7 +389,7 @@
     padding-top: 2.2rem;
     background-repeat: repeat;
     width: 100%;
-    height: 102px;
+    //height: 102px;
     position: fixed;
     top: 0;
     left: 0;
@@ -420,11 +406,7 @@
   }
 
   .navbar-nav {
-    .active {
-      &.nav-link {
-        background-color: rgba($black, 0.03);
-      }
-    }
+
 
     .disabled {
       &.nav-link {
@@ -458,12 +440,6 @@
       line-height: 1;
     }
 
-    .active {
-      &.nav-link {
-        background-color: rgba($white, 0.05);
-      }
-    }
-
     .disabled {
       &.nav-link {
         color: $gray-300;
@@ -478,10 +454,6 @@
   .header-navbar {
     // generic navbar dropdown specific
     .navbar-nav {
-      .show {
-        position: static;
-      }
-
       .open-navbar-container {
         padding-top: 0.625rem;
       }
@@ -536,23 +508,6 @@
   }
 
   // light navbar
-  .navbar-light {
-    .navbar-header {
-      .navbar-nav {
-        .nav-link {
-          color: $gray-600;
-        }
-      }
-    }
-
-    .navbar-container {
-      .navbar-nav {
-        .nav-link {
-          color: $gray-600;
-        }
-      }
-    }
-  }
 }
 
 // For Medium and down: iPad support for navbr

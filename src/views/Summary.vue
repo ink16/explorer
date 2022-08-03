@@ -88,12 +88,12 @@ export default {
       marketData: null,
       chain: {
         title: '',
-        class: 'border-primary',
+        class: '',
         items: [
-          { subtitle: 'height', icon: 'BoxIcon', color: 'light-success' },
-          { subtitle: 'bonded_and_supply', icon: 'DollarSignIcon', color: 'light-danger' },
-          { subtitle: 'bonded_ratio', icon: 'PercentIcon', color: 'light-warning' },
-          { subtitle: 'inflation', icon: 'TrendingUpIcon', color: 'light-primary' },
+          { subtitle: 'height', icon: 'BoxIcon', color: 'primary' },
+          { subtitle: 'bonded_and_supply', icon: 'DollarSignIcon', color: 'primary' },
+          { subtitle: 'bonded_ratio', icon: 'PercentIcon', color: 'primary' },
+          { subtitle: 'inflation', icon: 'TrendingUpIcon', color: 'primary' },
         ],
       },
       staking: {
@@ -144,8 +144,6 @@ export default {
   created() {
     this.$http.getLatestBlock().then(res => {
       const height = this.chain.items.findIndex(x => x.subtitle === 'height')
-
-      this.$set(this.chain, 'title', `Chain ID: ${res.block.header.chain_id}`)
       this.$set(this.chain.items[height], 'title', res.block.header.height)
       if (timeIn(res.block.header.time, 3, 'm')) {
         this.syncing = true

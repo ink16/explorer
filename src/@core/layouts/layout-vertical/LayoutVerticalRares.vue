@@ -5,20 +5,14 @@
     :data-col="'1-column'"
   >
     <!-- Navbar -->
-    <b-container>
-      <b-row class="align-items-center justify-content-center px-1">
-        <b-col
-          cols="12"
-        >
-          <slot
-            name="navbar"
-          >
-            <app-navbar-vertical-layout :toggle-vertical-menu-active="toggleVerticalMenuActive" />
-          </slot>
-        </b-col>
-      </b-row>
-    </b-container>
-
+    <slot
+      name="navbar"
+      :toggle-vertical-menu-active="toggleVerticalMenuActive"
+      :navbar-background-color="navbarBackgroundColor"
+      :navbar-type-class="[...navbarTypeClass, 'header-navbar navbar navbar-shadow align-items-center']"
+    >
+      <app-navbar-vertical-layout :toggle-vertical-menu-active="toggleVerticalMenuActive" />
+    </slot>
     <!--/ Navbar -->
 
     <!-- Content -->
@@ -47,7 +41,7 @@
 
     <!-- Footer -->
     <footer
-      class="footer footer-light mt-auto"
+      class="footer footer-light"
       :class="[footerTypeClass]"
     >
       <slot name="footer">
@@ -65,9 +59,7 @@ import { onUnmounted } from '@vue/composition-api'
 import AppNavbarVerticalLayout from '@core/layouts/components/app-navbar/AppNavbarVerticalLayout.vue'
 import AppFooter from '@core/layouts/components/AppFooter.vue'
 import useAppConfig from '@core/app-config/useAppConfig'
-import {
-  BNavbar, BContainer, BRow, BCol,
-} from 'bootstrap-vue'
+import { BNavbar } from 'bootstrap-vue'
 import LayoutContentRendererDefault from '@core/layouts/components/layout-content-renderer/LayoutContentRendererDefault.vue'
 import LayoutContentRendererLeft from '@core/layouts/components/layout-content-renderer/LayoutContentRendererLeft.vue'
 import LayoutContentRendererLeftDetached from '@core/layouts/components/layout-content-renderer/LayoutContentRendererLeftDetached.vue'
@@ -82,9 +74,6 @@ export default {
     AppFooter,
     VerticalNavMenu,
     BNavbar,
-    BContainer,
-    BRow,
-    BCol,
     LayoutContentRendererLeftDetached,
     LayoutContentRendererLeft,
     LayoutContentRendererDefault,

@@ -1,0 +1,31 @@
+{
+  "chain_name": "devnet",
+  "api": [
+    "http://142.132.197.4:1317/"
+  ],
+  "rpc": [
+    "http://142.132.197.4:26657/",
+    "http://142.132.197.4:26657/genesis?",
+    "http://142.132.197.4:26657/status?"
+  ],
+  "sdk_version": "0.45.1",
+  "addr_prefix": "devnet",
+  "min_tx_fee": "0",
+  "logo": "/logos/agoric.png",
+  "assets": [
+    {
+      "symbol": "BLD",
+      "base": "ubld",
+      "exponent": 6,
+      "coingecko_id": "agoric",
+      "logo": "https://raw.githubusercontent.com/Agoric/agoric-sdk/master/packages/wallet/ui/public/tokens/BLD.svg"
+    },
+    {
+      "symbol": "RUN",
+      "base": "urun",
+      "exponent": 6,
+      "coingecko_id": "agoric",
+      "logo": "https://raw.githubusercontent.com/Agoric/agoric-sdk/master/packages/wallet/ui/public/tokens/RUN.svg"
+    }
+  ]
+}

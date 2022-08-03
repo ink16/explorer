@@ -42,6 +42,8 @@
     transform: scale(1, 1);
     opacity: 1;
     display: block;
+    overflow:visible;
+    min-width: 12rem;
   }
   .dropdown-toggle {
     &:focus {
