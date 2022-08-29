@@ -13,24 +13,35 @@
   >
 
     <div class="navbar-container d-flex content justify-content-between">
+
       <div class="d-flex justify-content-start">
         <b-navbar-toggle
           target="nav-collapse"
           class="mr-auto base"
           type="base"
         />
-        <b-img
-          src="/logos/humans.svg"
-          alt="humans logo"
-          class="d-none d-xl-flex img-fluid"
-        />
-
-        <div class="d-flex align-items-center justify-content-center px-1"><b-img
-          src="/logos/humans-mobile.svg"
-          alt="humans logo"
-          class="d-xl-none"
-        /></div>
+        <b-link
+          :to="{path:'/devnet'}"
+          style="padding-top: 11px;"
+        >
+          <b-img
+            src="/logos/humans.svg"
+            alt="humans logo"
+            class="d-none d-xl-flex img-fluid"
+          />
+        </b-link>
+        <div class="d-flex align-items-center justify-content-center px-1">
+          <b-link
+            :to="{path:'/devnet'}"
+          >
+            <b-img
+              src="/logos/humans-mobile.svg"
+              alt="humans logo"
+              class="d-xl-none"
+            />
+          </b-link></div>
       </div>
+
       <!-- Left Col -->
       <!-- Middle Col-->
       <b-collapse
@@ -187,7 +198,7 @@
 
 <script>
 import {
-  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg,
+  BNavbarNav, BAvatar, VBTooltip, BButton, BDropdown, BDropdownItem, BDropdownDivider, BCollapse, BNavbarToggle, BNavbarBrand, BNavItem, BNavForm, BNavbar, BImg, BLink,
 } from 'bootstrap-vue'
 import Ripple from 'vue-ripple-directive'
 import DarkToggler from '@core/layouts/components/app-navbar/components/DarkToggler.vue'
@@ -199,6 +210,7 @@ import { getLocalAccounts, timeIn, toDay } from '@/libs/utils'
 
 export default {
   components: {
+    BLink,
     BImg,
     BNavbar,
     BNavForm,
