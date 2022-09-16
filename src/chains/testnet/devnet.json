@@ -1,23 +1,24 @@
 {
   "chain_name": "devnet",
   "api": [
-    "http://142.132.197.4:1317/"
+    "https://devnet-explorer-api.humans.zone"
   ],
   "rpc": [
-    "http://142.132.197.4:26657/",
-    "http://142.132.197.4:26657/genesis?",
-    "http://142.132.197.4:26657/status?"
+    "https://devnet-explorer-rpc.humans.zone",
+    "https://devnet-explorer-rpc.humans.zone/genesis?",
+    "https://devnet-explorer-rpc.humans.zone/status?"
   ],
+  "coin_type": "118",
   "sdk_version": "0.45.1",
-  "addr_prefix": "devnet",
+  "addr_prefix": "human",
   "min_tx_fee": "0",
   "logo": "/logos/agoric.png",
   "assets": [
     {
-      "symbol": "BLD",
-      "base": "ubld",
+      "symbol": "HEART",
+      "base": "uheart",
       "exponent": 6,
-      "coingecko_id": "agoric",
+      "coingecko_id": "humans-ai",
       "logo": "https://raw.githubusercontent.com/Agoric/agoric-sdk/master/packages/wallet/ui/public/tokens/BLD.svg"
     },
     {
